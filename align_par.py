@@ -4,6 +4,7 @@ from bertalign import Encoder
 
 src_par_path = sys.argv[1]
 tgt_par_path = sys.argv[2]
+alignments_path = sys.argv[3]
 
 src_par = ""
 tgt_par = ""
@@ -30,5 +31,6 @@ for bead in (aligner.result):
     # calculate similarity
     alignments.append((src_line, tgt_line))
 
-for i in range(len(alignments)):
-    print(alignments[i][0] + "\t" + alignments[i][1])
+with open(alignments_path, "w", encoding="utf-8") as f:
+    for i in range(len(alignments)):
+        f.write(f"{alignments[i][0]}\t{alignments[i][1]}\n")

@@ -1,6 +1,5 @@
 numba==0.60.0
 faiss-cpu
-httpx>=0.28.1
 # faiss-gpu==1.7.2
 googletrans==4.0.0rc1
 sentence-splitter==1.4

@@ -20,7 +20,7 @@ with open(tgt_par_path, "r", encoding="utf-8") as f:
         tgt_par += line.strip() + "\n"
     
 
-aligner = bertalign.Bertalign(src=src_par, tgt=tgt_par)
+aligner = bertalign.Bertalign(src=src_par, tgt=tgt_par, is_split=True)
 
 aligner.align_sents()
 
